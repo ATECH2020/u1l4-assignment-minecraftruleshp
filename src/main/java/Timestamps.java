@@ -19,8 +19,20 @@ class Timestamps {
          *  your code goes here
          */
 
+        int newHour = hours1 * 3600; //converts hours1 to sec
+        int newHour2 = hours2 * 3600; //converts hours2 to sec
+        int newMinute1 = minutes1 * 60; //converts minutes2 to sec
+        int newMinute2 = minutes2 * 60; //converts minutes 2 to sec
+        
 
-        // closing the scanner object
+        int finalHours = newHour2 - newHour; 
+        int finalMinutes = newMinute2 - newMinute1;
+        int finalSeconds = seconds2 - seconds1;
+
+        int total = finalHours + finalMinutes + finalSeconds; //combines everything
+
+        System.out.print(total); //prints final result
+        //Closing the scanner object
         scanner.close();
     }
 }
